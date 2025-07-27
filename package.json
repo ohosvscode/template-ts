@@ -1,0 +1,57 @@
+{
+  "name": "@arkts/template-ts",
+  "version": "0.0.1",
+  "description": "",
+  "author": "Naily Zero <zero@naily.cc>",
+  "license": "MIT",
+  "homepage": "https://github.com/groupguanfang/template-ts#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/groupguanfang/template-ts.git"
+  },
+  "bugs": {
+    "url": "https://github.com/groupguanfang/template-ts/issues"
+  },
+  "keywords": [
+    "arkts",
+    "sdk",
+    "downloader",
+    "openharmony"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    }
+  },
+  "bin": {
+    "arkcode-sdk-downloader": "./dist/cli.js"
+  },
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "test": "vitest --ui --coverage",
+    "build": "tsdown",
+    "lint": "eslint .",
+    "prepublishOnly": "pnpm build"
+  },
+  "dependencies": {
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^4.14.1",
+    "@changesets/cli": "^2.29.4",
+    "@types/node": "^22.15.30",
+    "@vitest/coverage-v8": "^3.2.2",
+    "@vitest/ui": "^3.2.2",
+    "tsdown": "^0.12.7",
+    "vitest": "^3.2.2"
+  }
+}
